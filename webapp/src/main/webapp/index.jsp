@@ -1,3 +1,3 @@
 Hello, World!
 Hello, privet!
-Все ок!
+I'm Ok!
