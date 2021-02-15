@@ -23,7 +23,7 @@ pipeline {
                  imput message: 'Approve Prod deployment?'
                }  
                build job:'deploy_to_prod'
-             }     
-           }
-    }
+             }
+           } 
+       }
 }
