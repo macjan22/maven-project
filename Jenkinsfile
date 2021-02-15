@@ -17,12 +17,12 @@ pipeline {
        }
        stage ('Deployments') {
          parallel{
-           stage ('Deploy to Staging'){
+           stage ('Deploy to Test'){
              steps {
                sh "cp **/target/*.war /home/maks/dist/tomcat-test/webapps"
              }
            }
-           stage ('Deploy to prod') {
+           stage ('Deploy to Prod') {
              steps {
                sh "cp **/target/*.war /home/maks/dist/tomcat-prod/webapps"
              }     
