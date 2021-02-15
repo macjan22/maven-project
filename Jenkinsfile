@@ -19,11 +19,11 @@ pipeline {
            }
            stage ('Deploy to Prod') {
              steps {
-               timeout(time:5, unit:'DAYS')
+               timeout(time:5, unit:'DAYS'){
                  imput message: 'Approve Prod deployment?'
                }  
                build job:'deploy_to_prod'
              }     
            }
     }
-} 
+}
