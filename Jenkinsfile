@@ -12,7 +12,7 @@ pipeline {
            }
          }
        }
-       stage ('Deploy to Test'){
+       stage ('Deploy to Test') {
              steps {
                build job:'deploy_to_staging'
              }
@@ -20,7 +20,7 @@ pipeline {
            stage ('Deploy to Prod') {
              steps {
                timeout(time:5, unit:'DAYS'){
-                 imput message: 'Approve Prod deployment?'
+                 input message: 'Approve Prod deployment?'
                }  
                build job:'deploy_to_prod'
              }
